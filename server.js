@@ -2,10 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const articles = require('./routes/api/articles'); //import articles route
 const users = require('./routes/api/users'); //import users route
-const ejs = require('ejs');
 const cors = require('cors');
-const upload = require('./middleware/upload'); // upload middleware brought in to upload file
-const Article = require('./models/articleModel'); // Article model imported because template engine is used here
 const fs = require('fs')
 const path = require('path');
 
