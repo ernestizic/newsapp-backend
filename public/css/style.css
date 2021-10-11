@@ -1,0 +1,15 @@
+.header {
+  background-color: #3c3c3c;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+.header2 {
+  background-color: #f0f0f0;
+  padding: 6px;
+  text-align: center;
+  color: rgb(104, 34, 34);
+}
+.table {
+    margin-top: 40px;
+}
