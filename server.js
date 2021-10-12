@@ -7,22 +7,12 @@ const cors = require('cors');
 const fs = require('fs')
 const path = require('path');
 
-const mongoose = require("mongoose"); //test
 
-
-//const connectDB = require('./config/db');
+const connectDB = require('./configs/db');
 
 dotenv.config({path: './config/config.env'});
 
-//connectDB();
-mongoose.connect(
-    process.env.MONGODB_URI, 
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-);
-
+connectDB();
 
 
 const app = express();
@@ -53,9 +43,6 @@ app.get('/', (req, res)=> {
     res.render("index")
 });
 
-app.get('/admin', (req, res)=> {
-    res.render('admin')
-});
 
 // ejs routes ends here
 
