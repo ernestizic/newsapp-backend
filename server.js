@@ -7,12 +7,22 @@ const cors = require('cors');
 const fs = require('fs')
 const path = require('path');
 
+const mongoose = require("mongoose"); //test
 
-const connectDB = require('./config/db');
+
+//const connectDB = require('./config/db');
 
 dotenv.config({path: './config/config.env'});
 
-connectDB();
+//connectDB();
+mongoose.connect(
+    process.env.MONGODB_URI, 
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+);
+
 
 
 const app = express();
