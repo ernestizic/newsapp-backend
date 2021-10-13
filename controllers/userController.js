@@ -6,7 +6,7 @@ const auth = require('../middleware/auth')
 
 
 
-exports.getUsers = async (req, res, next) => {
+exports.getUsers = async (req, res) => {
     try {
         const users = await User.find();
         return res.status(200).json({
@@ -23,7 +23,7 @@ exports.getUsers = async (req, res, next) => {
 }
 
 
-exports.register = async (req, res, next) => {
+exports.register = async (req, res) => {
     const found = await User.findOne({email: req.body.email})
     try{
         if (found) {
@@ -67,7 +67,7 @@ exports.register = async (req, res, next) => {
 
 
 
-exports.auth = async (req, res, next) => {
+exports.auth = async (req, res) => {
     const user = await User.findOne({email: req.body.email})
     try{
         if (!user) {
@@ -106,7 +106,7 @@ exports.auth = async (req, res, next) => {
             error: 'Server error'
         })
     }
-}
+};
 
 
 exports.getUserData = (req, res) => {

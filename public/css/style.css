@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap');
+
 .header {
   background-color: #3c3c3c;
   padding: 15px;
@@ -10,6 +12,35 @@
   text-align: center;
   color: rgb(104, 34, 34);
 }
-.table {
-    margin-top: 40px;
+h4 {
+  color: rgb(104, 34, 34);
+  padding-top: 10px;
 }
+.table {
+  margin-top: 40px;
+}
+.request {
+    background-color: #3c3c3c;
+    color: #fff;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Andada Pro', serif;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+code{
+    color: #615a5a;
+}
+h6{
+    font-style: italic;
+}
+
+footer {
+    background-color: #3c3c3c;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+  }

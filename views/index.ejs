@@ -19,17 +19,18 @@
   </head>
   <body>
     <div class="header">
-      <h2>iBlog API</h2>
+      <h2>hidden-falls-93050.herokuapp.com</h2>
     </div>
     <div class="header2">
-      <h4>Overview</h4>
+      <h4>iBlog API (Version 1.0)</h4>
     </div>
     <div class="container">
+      <h4>Overview</h4>
       <table class="table table-bordered">
         <tbody>
           <tr>
             <td>API URL</td>
-            <td>http://localhost:5000/api</td>
+            <td>https://hidden-falls-93050.herokuapp.com/api</td>
           </tr>
           <tr>
             <td>API Version</td>
@@ -45,6 +46,35 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="articles">
+        <h4>Articles</h4>
+        <code>Get all articles</code>
+        <h6>Request example usage</h6>
+        <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/articles</div>
+      </div>
+
+      <div class="article-detail">
+        <h4>Article</h4>
+        <code>Get article details by id</code>
+        <h6>Request example usage</h6>
+        <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/article/{id}</div>
+      </div>
+
+      <div class="articles">
+        <h4>Search</h4>
+        <code>Search articles by title or keywords</code>
+        <h6>Request example usage</h6>
+        <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/search/articles/{query}</div>
+      </div>
+
+      <div class="articles">
+        <h4>Category</h4>
+        <code>Get articles by category</code>
+        <h6>Request example usage</h6>
+        <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/articles/category/{query}</div>
+      </div>
     </div>
+    <footer>&copy; 2021 iBlog Media. All rights reserved</footer>
   </body>
 </html>
