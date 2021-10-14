@@ -1,15 +1,18 @@
 const multer = require('multer');
 const path = require('path');
+const cloudinary = require("cloudinary").v2;
+const {CloudinaryStorage} = require('multer-storage-cloudinary')
 
 
-// Multer middleware
-// Set storage engine
-const fileStorageEngine = multer.diskStorage({
-    destination: './public/images',
-    filename: (req, file, cb) => {
-        cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
+// STORAGE FOR CLOUDINARY
+const fileStorageEngine = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: 'images',
     }
 })
+
+
 
 // Check file type
 const checkFileType =(file, cb)=> {

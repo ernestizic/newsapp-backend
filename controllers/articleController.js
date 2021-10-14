@@ -1,8 +1,6 @@
 const Article = require('../models/articleModel')
 const upload = require('../middleware/upload')
 const auth = require('../middleware/auth') 
-// const path = require('path');
-// const fs = require('fs')
 
 
 
@@ -53,11 +51,10 @@ exports.getOneArticle = async (req, res, next)=> {
 //@desc Add an article
 //@request POST
 // @route /api/v1/articles
-exports.addArticle = async (req, res, next)=> {
+exports.addArticle = (req, res, next)=> {
     try {
-
-        auth, upload(req, res, (err)=> {
-            //console.log(req.file)
+        upload(req, res, (err)=> {
+            console.log(req.file)
             if(err){
                 res.status(400).json({
                     msg: err
@@ -74,14 +71,14 @@ exports.addArticle = async (req, res, next)=> {
                         title: req.body.title,
                         body: req.body.body,
                         category: req.body.category,
-                        image: req.file.filename,
+                        image: req.file.path,
                     }
                     Article.create(newArticle)
-                        .then(result => {
+                        .then(article => {
                             //console.log(result)
                             res.status(201).json({
                                 success: true,
-                                data: result
+                                data: article
                             })
                         })
                 }
