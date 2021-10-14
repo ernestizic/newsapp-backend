@@ -9,12 +9,14 @@ const path = require("path");
 const cloudinary = require("cloudinary").v2;
 
 
-
 dotenv.config();
 
+/***************    DATABASE CONNECTION ***************** */
 
 const connectDB = require("./configs/db");
 connectDB();
+
+/********************************************************** */
 
 // Cloudinary config
 cloudinary.config({
