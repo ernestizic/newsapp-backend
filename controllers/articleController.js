@@ -202,8 +202,7 @@ exports.getArticlesByCategory = async(req, res, next) => {
 // @route /api/v1/search/articles/:searchword
 exports.getArticlesBySearch = async(req, res, next)=> {
     try{
-        const articles = await Article.find({$text: {title: req.params.searchword, body: req.params.searchword}});
-
+        const articles = await Article.find({$text: {$search: req.params.searchword}});
         if(articles){
             return res.status(200).json({
                 success: true,

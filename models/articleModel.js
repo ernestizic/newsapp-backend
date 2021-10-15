@@ -20,5 +20,6 @@ const ArticleSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+ArticleSchema.index({title: 'text', body: 'text'});
 
 module.exports = mongoose.model("Article", ArticleSchema);

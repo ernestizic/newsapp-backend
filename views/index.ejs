@@ -49,30 +49,126 @@
 
       <div class="articles">
         <h4>Articles</h4>
-        <code>Get all articles</code>
+        <h5>Get all articles</h5>
         <h6>Request example usage</h6>
         <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/articles</div>
+
+        <h6>Response</h6>
+        <pre>
+          <code>
+            {
+              "success": true,
+              "count": 5,
+              "articles": [
+                  {
+                      "_id": "616828ece306933e050fcdc2",
+                      "title": "1914 translation by H. Rackham",
+                      "body": "\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"",
+                      "image": "https://res.cloudinary.com/ernestizic/image/upload/v1634216172/images/rohs82nomyyvpx3yfqrh.jpg",
+                      "category": "technology",
+                      "createdAt": "2021-10-14T12:56:12.402Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "616889f846c9239a11cd7feb",
+                      "title": "A new title",
+                      "body": "Just checking",
+                      "category": "entertainment",
+                      "createdAt": "2021-10-14T19:50:16.388Z",
+                      "__v": 0
+                  },
+                  ...
+              ]
+            }
+          </code>
+        </pre>
       </div>
 
       <div class="article-detail">
         <h4>Article</h4>
-        <code>Get article details by id</code>
+        <h5>Get article details by id</h5>
         <h6>Request example usage</h6>
         <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/article/{id}</div>
+
+        <h6>Response</h6>
+        <pre>
+          <code>
+            {
+              "success": true,
+              "article": {
+                  "_id": "616828ece306933e050fcdc2",
+                  "title": "1914 translation by H. Rackham",
+                  "body": "\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"",
+                  "image": "https://res.cloudinary.com/ernestizic/image/upload/v1634216172/images/rohs82nomyyvpx3yfqrh.jpg",
+                  "category": "technology",
+                  "createdAt": "2021-10-14T12:56:12.402Z",
+                  "__v": 0
+              }
+            }
+          </code>
+        </pre>
       </div>
 
       <div class="articles">
         <h4>Search</h4>
-        <code>Search articles by title or keywords</code>
+        <h5>Search articles by title or keywords</h5>
         <h6>Request example usage</h6>
         <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/search/articles/{query}</div>
+
+        <h6>Response</h6>
+        <pre>
+          <code>
+            {
+              "success": true,
+              "count": 1,
+              "articles": [
+                  {
+                      "_id": "616889f846c9239a11cd7feb",
+                      "title": "A new title",
+                      "body": "Just checking",
+                      "category": "entertainment",
+                      "createdAt": "2021-10-14T19:50:16.388Z",
+                      "__v": 0
+                  }
+              ]
+            }
+          </code>
+        </pre>
       </div>
 
       <div class="articles">
         <h4>Category</h4>
-        <code>Get articles by category</code>
+        <h5>Get articles by category</h5>
         <h6>Request example usage</h6>
         <div class="request">https://hidden-falls-93050.herokuapp.com/api/v1/articles/category/{query}</div>
+
+        <h6>Response</h6>
+        <pre>
+          <code>
+            {
+              "success": true,
+              "count": 2,
+              "articles": [
+                  {
+                      "_id": "616889f846c9239a11cd7feb",
+                      "title": "A new title",
+                      "body": "Just checking",
+                      "category": "entertainment",
+                      "createdAt": "2021-10-14T19:50:16.388Z",
+                      "__v": 0
+                  },
+                  {
+                      "_id": "6168a10e8fd4e0c6b0ea6a8f",
+                      "title": "Just a little sin",
+                      "body": "a mount zion movie",
+                      "category": "entertainment",
+                      "createdAt": "2021-10-14T21:28:46.200Z",
+                      "__v": 0
+                  }
+              ]
+            }
+          </code>
+        </pre>
       </div>
     </div>
     <footer>&copy; 2021 iBlog Media. All rights reserved</footer>
