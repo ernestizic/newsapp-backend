@@ -67,7 +67,7 @@ exports.register = async (req, res) => {
 
 
 
-exports.auth = async (req, res) => {
+exports.login = async (req, res) => {
     const user = await User.findOne({email: req.body.email})
     try{
         if (!user) {
