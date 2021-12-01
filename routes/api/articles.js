@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Article = require("../../models/articleModel");
+const Comment = require("../../models/commentModel")
 const upload = require("../../middleware/upload");
 const auth = require("../../middleware/auth");
 
@@ -33,10 +34,12 @@ router.get("/articles", async (req, res) => {
 router.get("/article/:id", async (req, res) => {
   try {
     const article = await Article.findById(req.params.id);
+    const comments = await Comment.find({articleid: req.params.id})
 
     return res.status(200).json({
       success: true,
       article: article,
+      comments: comments
     });
   } catch (err) {
     return res.status(404).json({

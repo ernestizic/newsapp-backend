@@ -19,7 +19,13 @@ const ArticleSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+
+  postedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
+  
 });
-ArticleSchema.index({title: 'text', body: 'text'});
+ArticleSchema.index({ title: "text", body: "text" });
 
 module.exports = mongoose.model("Article", ArticleSchema);

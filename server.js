@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const articles = require("./routes/api/articles"); //import articles route
+const comments = require("./routes/api/comments");
 const users = require("./routes/api/users"); //import users route
 const ejs = require("ejs");
 const cors = require("cors");
@@ -54,6 +55,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", articles);
 app.use("/api", users);
+app.use("/api", comments);
 
 const PORT = process.env.PORT || 5000;
 
